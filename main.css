@@ -1,0 +1,96 @@
+/*
+CSS Style Sheet
+JS MVC Todo App
+https://github.com/domison/
+*/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: sans-serif;
+	font-size: 1rem;
+	color: rgb(0, 0, 0);
+}
+
+#main {
+	max-width: 450px;
+	margin: 2rem auto;
+	padding: 0 1rem;
+}
+
+form {
+	display: flex;
+	margin-bottom: 2rem;
+}
+
+[type='text'],
+button {
+	display: inline-block;
+	-webkit-appearance: none;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+}
+
+button {
+	cursor: pointer;
+	background: #088540;
+	color: white;
+	border: 2px solid #088540;
+	margin: 0 0.5rem;
+}
+
+[type='text'] {
+	width: 100%;
+}
+
+[type='text']:active,
+[type='text']:focus {
+	outline: 0;
+	border: 2px solid #08854062;
+}
+
+[type='checkbox'] {
+	margin-right: 1rem;
+	font-size: 2rem;
+}
+
+h1 {
+	color: #222;
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	background: #f4f4f4;
+	border-radius: 4px;
+}
+
+li span {
+	display: inline-block;
+	padding: 0.5rem;
+	width: 250px;
+	border-radius: 4px;
+	border: 2px solid transparent;
+}
+
+li span:hover {
+	background: #085e2e;
+}
+
+li span:focus {
+	outline: 0;
+	border: 2px solid #085e2e;
+	background: #436151;
+}
