@@ -17,7 +17,7 @@ class Model {
 		];
 	}
 
-	// adding a new todo to array
+	// Adding a new todo to array
 	addTodo(text) {
 		const todo = {
 			id: this.todos.length > 0 ? this.todos[this.todos.length - 1].id + 1 : 1,
@@ -28,7 +28,7 @@ class Model {
 		this.todos.push(todo);
 	}
 
-	// replacing text at specified ID
+	// Replacing text at specified ID
 	editTodo(id, newText) {
 		// map iterates through all tasks in todos[]
 		this.todos = this.todos.map((todo) =>
@@ -42,13 +42,13 @@ class Model {
 		);
 	}
 
-	// deleting task by filtering through todos[], excluding specific ID
+	// Deleting task by filtering through todos[], excluding specific ID
 	deleteTodo(id) {
 		// returns everything, but the todo that was specified (ergo deletes)
 		this.todos = this.todos.filter((todo) => todo.id !== id);
 	}
 
-	// changing task to done/not done
+	// Changing task to done/not done
 	togglingTodo(id) {
 		this.todos = this.todos.map((todo) =>
 			todo.id === id
@@ -64,7 +64,62 @@ class Model {
 
 class View {
 	constructor() {
-		// TODO more code there
+		// DOM tree
+		// #main div / root container
+		this.app = this.getElement('#main');
+
+		// h1
+		this.title = this.createElement('h1');
+		this.title.textContent = 'My tasks';
+
+		// Form
+		this.form = this.createElement('form');
+		this.input = this.createElement('input');
+		this.input['type'] = 'text';
+		this.input['placeholder'] = 'Add a task';
+		this.input['name'] = 'task';
+
+		this.submitButton = this.createElement('button');
+		this.submitButton.textContent = 'Submit';
+
+		// List representation of tasks
+		this.taskList = this.createElement('ul', 'task-list');
+
+		// Appending and submitting input from form
+		this.form.append(this.input, this.submitButton);
+
+		// Appending title, form and list to app
+		this.app.append(this.title, this.form, this.taskList);
+	}
+	// Displaying all tasks, and updating when a change was made
+	displayTasks(todos) {
+		// TODO more code to come
+	}
+
+	// Private getter and resetter for input value
+	get _taskText() {
+		return this.input.value;
+	}
+
+	_resetInput() {
+		this.input.value = ``;
+	}
+
+	// Creating an element in DOM with an CSS class (optional)
+	createElement(htmlTag, cssClassName) {
+		const element = document.createElement(htmlTag);
+		if (cssClassName) {
+			element.classList.add(cssClassName);
+		}
+
+		return element;
+	}
+
+	// Retrieving an element from DOM
+	getElement(selectorName) {
+		const element = document.querySelector(selectorName);
+
+		return element;
 	}
 }
 
