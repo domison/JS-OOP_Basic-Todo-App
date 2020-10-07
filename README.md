@@ -13,3 +13,7 @@ VSCode, Git, Chrome DevTools
 
 Languages used:
 HTML / CSS / JS
+
+---
+
+My appreciation goes out to Tania Rascia for all the inspiration and guidance she provided with her portfolio page and her articles.
