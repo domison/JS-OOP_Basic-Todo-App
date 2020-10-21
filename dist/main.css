@@ -42,7 +42,7 @@ button {
 	-webkit-appearance: none;
 	padding: 0.5rem 1rem;
 	font-size: 1rem;
-	border: 2px solid #ccc;
+	border: 1px solid #ccc;
 	border-radius: 4px;
 }
 
@@ -54,12 +54,15 @@ button.submit {
 	margin: 0 0.5rem;
 }
 button.delete {
+	font-size: larger;
+	font-weight: 500;
+	font-family: monospace;
 	cursor: pointer;
 	background: #b80000;
 	color: white;
 	border: 2px solid #b80000;
-	margin: 0 1rem;
-	padding: 0.2rem 0.4rem;
+	margin: 0 1rem 0 4rem;
+	padding: 0.2rem 0.5rem;
 }
 button.load,
 button.save {
