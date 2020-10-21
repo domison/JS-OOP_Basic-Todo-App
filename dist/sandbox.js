@@ -170,7 +170,7 @@ class View {
 
 				// Giving a delete button to each task in list-element
 				const deleteButton = this.createElement('button', 'delete');
-				deleteButton['textContent'] = 'Delete!';
+				deleteButton['textContent'] = 'X';
 
 				// Appending everything to the generated list-element
 				li.append(check, span, deleteButton);
