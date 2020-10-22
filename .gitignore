@@ -1,8 +1,0 @@
-*~
-.*~
-.DS_Store
-.Rhistory
-.RData
-.vscode
-node_modules
-package*.json
